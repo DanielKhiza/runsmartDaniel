@@ -19,7 +19,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src("src/sass/**/*.+(scss|sass)")
+    return gulp.src("src/sass/**/*.+(scss|sass)") /* * значат что мы следим в подпапках за всеми файлами сасс */
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) /* показывает какая папка будет включатьсяв браузере это папка стилей + прописан код для сжатитя файлов сасс */
         .pipe(rename({ suffix: '.min', prefix: '' })) /* при компиляции можно переименовывать с суфиксами и префиксами через сасс в цсс */
         .pipe(autoprefixer()) /* автоматическиставиться для последних версий браузера */

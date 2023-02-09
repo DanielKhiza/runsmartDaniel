@@ -3,3 +3,13 @@
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
+
+.container {
+    /* создаёться один глобальный класс для всей страницы и по умолчанию колонки будут на всю страницу */
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+@import 'block/promo';
+@import 'block/header';
+@import 'block/buttons';
